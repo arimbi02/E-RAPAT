@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Attendance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="attendance-body">
+    <div class="attendance-container">
+        <h2>Confirm Attendance</h2>
+        <form action="submit_absensi.php" method="POST">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="meeting">Meeting Name*</label>
+            <input type="text" id="meeting" name="meeting" required>
+            
+            <label for="photo">Photo Evidence*</label>
+            <input type="file" id="photo" name="photo" required>
+            
+            <label for="signature">Signature*</label>
+            <input type="file" id="signature" name="signature" required>
+            
+            <div class="attendance-btn-container">
+                <button type="submit" name="action" value="checkin" class="attendance-btn attendance-btn-checkin">Check-in</button>
+                <button type="submit" name="action" value="checkout" class="attendance-btn attendance-btn-checkout">Check-out</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
