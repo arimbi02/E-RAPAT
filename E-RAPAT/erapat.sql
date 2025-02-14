@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2025 at 04:38 AM
+-- Generation Time: Feb 14, 2025 at 04:57 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -37,6 +37,39 @@ CREATE TABLE `agenda` (
   `documentation` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `password`) VALUES
+('09010622005', '20050602'),
+('09020622022', '081231');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `presence`
+--
+
+CREATE TABLE `presence` (
+  `nip` varchar(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `meeting_name` varchar(200) NOT NULL,
+  `photo` varchar(100) NOT NULL,
+  `signature` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -46,6 +79,12 @@ CREATE TABLE `agenda` (
 --
 ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
